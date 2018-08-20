@@ -29,15 +29,7 @@ public class CohortTest {
         student1 = new Student("Mark");
         cohortE23 = new Cohort("E23");
         cohortE23.addStudentToStudentsArraylist(student1);
-        assertEquals(1, cohortE23.countStudentsInStudentsArrayList());
-    }
-
-    @Test
-    public void canGetRandomStudentFromStudentsArrayList(){
-        cohortE23 = new Cohort("E23");
-        student1 = new Student("Mark");
-        cohortE23.addStudentToStudentsArraylist(student1);
-        assertEquals("Mark", cohortE23.getRandomStudent().getName());
+        assertEquals(21, cohortE23.countStudentsInStudentsArrayList());
     }
 
     @Test

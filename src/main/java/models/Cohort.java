@@ -2,6 +2,7 @@ package models;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class Cohort {
 
@@ -15,7 +16,29 @@ public class Cohort {
     public Cohort(String name) {
         this.name = name;
         this.studentsInCohort = new ArrayList<Student>();
+        studentsInCohort.add(new Student("Mark1"));
+        studentsInCohort.add(new Student("Mark2"));
+        studentsInCohort.add(new Student("Mark3"));
+        studentsInCohort.add(new Student("Mark4"));
+        studentsInCohort.add(new Student("Mark5"));
+        studentsInCohort.add(new Student("Mark6"));
+        studentsInCohort.add(new Student("Mark7"));
+        studentsInCohort.add(new Student("Mark8"));
+        studentsInCohort.add(new Student("Mark9"));
+        studentsInCohort.add(new Student("Mark10"));
+        studentsInCohort.add(new Student("Mark11"));
+        studentsInCohort.add(new Student("Mark12"));
+        studentsInCohort.add(new Student("Mark13"));
+        studentsInCohort.add(new Student("Mark14"));
+        studentsInCohort.add(new Student("Mark15"));
+        studentsInCohort.add(new Student("Mark16"));
+        studentsInCohort.add(new Student("Mark17"));
+        studentsInCohort.add(new Student("Mark18"));
+        studentsInCohort.add(new Student("Mark19"));
+        studentsInCohort.add(new Student("Mark20"));
     }
+
+    // List<String> examples = List.of("one", "two", "three");
 
     //Getter
 
