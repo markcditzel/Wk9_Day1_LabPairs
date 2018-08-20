@@ -74,4 +74,33 @@ public class Cohort {
         return pairedStudents;
     }
 
+    public String generateTwoNonIdenticalStudentsArrayListAndReturnNames(){
+        ArrayList<Student> pairedStudents = new ArrayList<Student>();
+        Collections.shuffle(this.studentsInCohort);
+        Student randomStudent1 = studentsInCohort.get(0);
+        Student randomStudent2 = studentsInCohort.get(1);
+        pairedStudents.add(randomStudent1);
+        pairedStudents.add(randomStudent2);
+        String student1 = pairedStudents.get(0).getName();
+        String student2 = pairedStudents.get(1).getName();
+        return student1 + student2;
+    }
+
+
+
+
+
+//    public String getPairedStudentsNames(){
+//        String student1 = this.generateTwoNonIdenticalStudentsArrayList().remove(0).getName();
+//        String student2 = this.generateTwoNonIdenticalStudentsArrayList().remove(1).getName();
+//        return student1 + student2;
+//    }
+//
+//    public String getNameFromPairedStudentArrayList(ArrayList<Student> pairedStudentsArrayList){
+//        Student student1 = pairedStudentsArrayList.remove(0);
+//        Student student2 = pairedStudentsArrayList.remove(1);
+//        return student1.getName() + student2.getName();
+//    }
+
+
 }

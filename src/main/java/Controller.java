@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static spark.Spark.get;
+import static spark.route.HttpMethod.get;
 
 public class Controller {
     public static void main(String[] args) {
@@ -21,6 +22,15 @@ public class Controller {
             model.put("result", result);
             return new ModelAndView(model, "resultRandomStudent.vtl");
         }, velocityTemplateEngine);
+
+        get("/pair", (req, res) -> {
+            Cohort cohort = new Cohort("E23");
+            String result = cohort.generateTwoNonIdenticalStudentsArrayListAndReturnNames();
+            Map<String, Object> model = new HashMap<>();
+            model.put("result", result);
+            return new ModelAndView(model, "resultRandomPair.vtl");
+        }, velocityTemplateEngine);
     }
+
 
 }
